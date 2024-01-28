@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwmaw7cyyyf1k"]
+
+[ext_resource type="Texture2D" uid="uid://bdsaglt4fc642" path="res://scenes/talkIndicator/icon.svg" id="1_1wut6"]
+[ext_resource type="Script" path="res://scenes/talkIndicator/talkIndicator.gd" id="1_6ej41"]
+
+[node name="TalkIndicator" type="Node2D"]
+script = ExtResource("1_6ej41")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(298, 96)
+texture = ExtResource("1_1wut6")
