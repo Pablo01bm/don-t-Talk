@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://byhuhxma0gnqv"]
+
+[ext_resource type="Script" path="res://scenes/pauseMenu/PauseMenu.gd" id="1_4grvm"]
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4grvm")
+
+[node name="PauseTitle" type="Label" parent="."]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 68.0
+offset_right = 675.0
+offset_bottom = 164.0
+theme_override_font_sizes/font_size = 70
+text = "PAUSA"
+
+[node name="Reanudar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 433.0
+offset_top = 226.0
+offset_right = 677.0
+offset_bottom = 303.0
+theme_override_font_sizes/font_size = 50
+text = "Reanudar"
+
+[node name="Salir" type="Button" parent="."]
+layout_mode = 0
+offset_left = 401.0
+offset_top = 339.0
+offset_right = 725.0
+offset_bottom = 416.0
+theme_override_font_sizes/font_size = 50
+text = "Salir al menú"
+
+[connection signal="pressed" from="Reanudar" to="." method="_on_reanudar_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]

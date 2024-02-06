@@ -1,6 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://duv2c77gcqxq5"]
+[gd_scene load_steps=3 format=3 uid="uid://duv2c77gcqxq5"]
 
 [ext_resource type="Script" path="res://scenes/mainScreen/main_screen.gd" id="1_1xr1d"]
+[ext_resource type="PackedScene" uid="uid://byhuhxma0gnqv" path="res://scenes/pauseMenu/PauseMenu.tscn" id="2_stw2n"]
 
 [node name="mainScreen" type="Node2D"]
 script = ExtResource("1_1xr1d")
+
+[node name="faults" type="Node2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 325)
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D"]
+visible = false
+offset_left = -576.0
+offset_top = -326.0
+offset_right = 577.0
+offset_bottom = 319.0
+color = Color(0.2, 0.2, 0.2, 0.835294)
+
+[node name="PauseMenu" parent="Camera2D" instance=ExtResource("2_stw2n")]
+visible = false
+offset_left = -566.0
+offset_top = -283.0
+offset_right = -566.0
+offset_bottom = -283.0
